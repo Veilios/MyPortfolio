@@ -7,3 +7,4 @@ My personal portfolio showcasing my work.
     - Sass
     - Emailjs
     - Smooth Scroll
+    - react-typed
