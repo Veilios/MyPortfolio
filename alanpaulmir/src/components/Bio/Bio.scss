@@ -1,5 +1,5 @@
 .bio {
-    height: 90vh;
+    height: 95vh;
     display: flex;
     align-items: center;
 
@@ -19,8 +19,8 @@
         }
 
         .b-card {
-            width: 60%;
-            height: 70vh;
+            width: 50%;
+            height: 60vh;
             border-radius: 30px;
             position: relative;
             overflow: hidden;
@@ -35,7 +35,7 @@
 
     .b-right {
         flex: 1;
-        margin-right: 10px;
+        margin-right: 25px;
 
         .b-title {
             font-weight: 500;
