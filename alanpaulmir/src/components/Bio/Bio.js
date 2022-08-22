@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Photographer from "../../assests/photographer.jpg";
 import Award from "../../assests/award.png";
@@ -6,6 +6,17 @@ import LambdaCertificate from "../../assests/lambdacertificate.png";
 import "./Bio.scss";
 
 const Bio = () => {
+    const [isLActive, setIsLActive] = useState(false);
+    const [isGActive, setIsGActive] = useState(false)
+
+    const handleLClick = () => {
+        setIsLActive(current => !current);
+    };
+
+    const handleGClick = () => {
+        setIsGActive(current => !current);
+    };
+
     return (
         <div className="bio" >
             <div className="b-left" >
@@ -28,7 +39,7 @@ const Bio = () => {
                 </p>
 
                 <div className="b-award" >
-                    <img src={LambdaCertificate} alt="Certificate of completion issued by Lambda School" className="b-award-img lambda" />
+                    <img src={LambdaCertificate} alt="Certificate of completion issued by Lambda School" className={isLActive ? "b-award-img lambda active" : "b-award-img lambda"} onClick={handleLClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Lambda Full Stack Web Certificate</h4>
                         <p className="b-award-desc" >
@@ -40,7 +51,7 @@ const Bio = () => {
                 </div>
 
                 <div className="b-award" >
-                    <img src={Award} alt="Certificate of completion issued by Google" className="b-award-img" />
+                    <img src={Award} alt="Certificate of completion issued by Google" className={isGActive ? "b-award-img active" : "b-award-img"} onClick={handleGClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Google UX/UI Certificate</h4>
                         <p className="b-award-desc" >
