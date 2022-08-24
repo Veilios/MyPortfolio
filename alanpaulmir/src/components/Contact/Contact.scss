@@ -23,6 +23,30 @@
                 font-weight: 300;
                 width: 70%;
 
+                &:hover {
+
+                    svg {
+                        transform: scale(1.2);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    transition: ease-in-out 1s;
+
+                    &:hover {
+                        color: blue;
+                    }
+                }
+
+                svg {
+                    width: 20px;
+                    padding: 0 1rem;
+                    filter: invert(11%) sepia(13%) saturate(4089%) hue-rotate(108deg) brightness(96%) contrast(86%);
+                    transition: ease-in-out 1s;
+                }
+
                 .c-icon {
                     width: 30px;
                     height: 30px;
@@ -47,6 +71,10 @@
                 span {
                     font-weight: bold;
                 }
+            }
+
+            .thanks {
+                margin: 13rem 0;
             }
 
             form {
