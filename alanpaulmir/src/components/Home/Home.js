@@ -57,6 +57,8 @@ const Home = () => {
                     </a>
                 </div>
             </div>
+
+            <div className="mouse"></div>
         </div>
     );
 };

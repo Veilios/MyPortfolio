@@ -7,6 +7,48 @@
     justify-content: center;
     align-items: center;
 
+    .mouse {
+        width: 20px;
+        height: 30px;
+        border: 1.5px solid white;
+        border-radius: 60px;
+        position: absolute;
+        top: 1;
+        left: 1;
+        right: 1;
+        bottom: 0;
+        margin-bottom: 1rem;
+
+        &::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            border-radius: 50%;
+            opacity: 1;
+            animation: wheel 2s infinite;
+            -webkit-animation: wheel 2s infinite;
+        }
+    }
+
+    @keyframes wheel {
+        to {
+            opacity: 0;
+            top: 20px;
+        }
+    }
+
+    @-webkit-keyframes wheel {
+        to {
+            opacity: 0;
+            top: 20px;
+        }
+    }
+
     .info {
         display: flex;
         justify-content: center;
