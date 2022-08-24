@@ -1,32 +1,71 @@
 import React, { useRef, useState, } from 'react';
 import emailjs from '@emailjs/browser';
+import { useFormik } from 'formik';
 
 import './Contact.scss';
+
+
+const validate = values => {
+    const errors = {};
+    if (!values.user_name) {
+        errors.user_name = 'Required *';
+    } else if (values.user_name.length > 15) {
+        errors.user_name = 'Must be 15 characters or less';
+    }
+
+    if (!values.user_email) {
+        errors.user_email = 'Required *';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.user_email)) {
+        errors.user_email = 'Invalid email address';
+    }
+
+    if (!values.user_subject) {
+        errors.user_subject = 'Required *';
+    } else if (values.user_subject.length > 20) {
+        errors.user_subject = 'Must be 20 characters or less';
+    }
+
+    if (!values.user_message) {
+        errors.user_message = 'Required *';
+    } else if (values.user_message.length > 250) {
+        errors.user_message = 'Must be 250 characters or less'
+    }
+
+    return errors;
+};
 
 const Contact = () => {
 
     const formRef = useRef();
     const [done, setDone] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        emailjs
-            .sendForm(
-                "service_a4rlsrp",
-                "template_gin6rqa",
-                formRef.current,
-                "p8CUtjACGVo9E3B52"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                    setDone(true);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
-    };
+    const formik = useFormik({
+        initialValues: {
+            user_name: '',
+            user_email: '',
+            user_subject: '',
+            user_message: ''
+        },
+        validate,
+        onSubmit: values => {
+            emailjs
+                .sendForm(
+                    "service_a4rlsrp",
+                    "template_gin6rqa",
+                    formRef.current,
+                    "p8CUtjACGVo9E3B52"
+                )
+                .then(
+                    (result) => {
+                        console.log(result.text);
+                        setDone(true);
+                    },
+                    (error) => {
+                        console.log(error.text);
+                    }
+                );
+        }
+    })
 
     return (
         <div className="c" >
@@ -97,11 +136,19 @@ const Contact = () => {
                                 <p>I'll will be in touch soon.</p>
                             </div>
                             :
-                            <form ref={formRef} onSubmit={handleSubmit} >
-                                <input name="user_name" type="text" placeholder="Name" />
-                                <input name="user_email" type="text" placeholder="Email" />
-                                <input name="user_subject" type="text" placeholder="Subject" />
-                                <textarea name="user_message" rows="5" placeholder="Message" />
+                            <form ref={formRef} onSubmit={formik.handleSubmit} >
+                                {formik.touched.user_name && formik.errors.user_name ? <div className='error'>{formik.errors.user_name}</div> : null}
+                                <input id='user_name' name="user_name" type="text" placeholder="Name" onChange={formik.handleChange} value={formik.values.user_name} onBlur={formik.handleBlur} />
+
+                                {formik.touched.user_email && formik.errors.user_email ? <div className='error'>{formik.errors.user_email}</div> : null}
+                                <input id='user_email' name="user_email" type="text" placeholder="Email" onChange={formik.handleChange} value={formik.values.user_email} onBlur={formik.handleBlur} />
+
+                                {formik.touched.user_subject && formik.errors.user_subject ? <div className='error'>{formik.errors.user_subject}</div> : null}
+                                <input id='user_subject' name="user_subject" type="text" placeholder="Subject" onChange={formik.handleChange} value={formik.values.user_subject} onBlur={formik.handleBlur} />
+
+                                {formik.touched.user_message && formik.errors.user_message ? <div className='error'>{formik.errors.user_message}</div> : null}
+                                <textarea id='user_message' name="user_message" rows="5" placeholder="Message" onChange={formik.handleChange} value={formik.values.user_message} onBlur={formik.handleBlur} />
+
                                 <button>Submit</button>
                             </form>
                     }
