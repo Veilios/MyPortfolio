@@ -37,6 +37,7 @@
             width: 100%;
             justify-content: center;
             align-items: center;
+            color: #123524;
         }
     }
 
@@ -47,7 +48,7 @@
     }
 
     &:hover .pc-img {
-        transform: translateY(-100%);
+        transform: translateY(-20%);
     }
 }
 

@@ -14,6 +14,7 @@
             .c-title {
                 font-size: 60px;
                 width: 80%;
+                color: black;
             }
 
             .c-info-item {
@@ -32,11 +33,11 @@
 
                 a {
                     text-decoration: none;
-                    color: black;
+                    color: #555;
                     transition: ease-in-out 1s;
 
                     &:hover {
-                        color: blue;
+                        color: #688454;
                     }
                 }
 
@@ -67,9 +68,11 @@
             .c-desc {
                 font-weight: 200;
                 width: 96%;
+                color: #555;
 
                 span {
                     font-weight: bold;
+                    color: black;
                 }
             }
 
@@ -100,10 +103,16 @@
                 button {
                     border: none;
                     padding: 15px;
-                    background-color: #03b5aa;
+                    background-color: #00A767;
+                    border-radius: 5px;
                     color: white;
                     font-weight: 500;
                     cursor: pointer;
+                    transition: ease-in-out 1s;
+
+                    &:hover {
+                        background-color: #123524;
+                    }
                 }
             }
         }

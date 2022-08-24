@@ -39,7 +39,7 @@ const Bio = () => {
                 </p>
 
                 <div className="b-award" >
-                    <img src={LambdaCertificate} alt="Certificate of completion issued by Lambda School" className={isLActive ? "b-award-img lambda active" : "b-award-img lambda"} onClick={handleLClick} />
+                    <img src={LambdaCertificate} alt="Certificate of completion issued by Lambda School" className={isLActive ? "b-award-img active" : "b-award-img lambda"} onClick={handleLClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Lambda Full Stack Web Certificate</h4>
                         <p className="b-award-desc" >

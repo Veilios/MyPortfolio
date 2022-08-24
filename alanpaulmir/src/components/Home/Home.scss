@@ -1,8 +1,8 @@
 .home {
     width: 100%;
     height: 100vh;
-    background: gray;
-    color: #fff;
+    background: #123524;
+    color: #E8F3F5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
         h2 {
 
             .strings {
-                color: #123524;
+                color: #00A767;
                 font-weight: 500;
                 font-size: larger;
             }
@@ -40,11 +40,12 @@
 
                 svg {
                     width: 20px;
-                    transition: ease-in 0.3s;
-                    filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(125deg) brightness(105%) contrast(103%);
+                    transition: ease-in 1s;
+                    filter: invert(96%) sepia(12%) saturate(134%) hue-rotate(142deg) brightness(99%) contrast(95%);
 
                     &:hover {
                         transform: scale(1.3);
+                        filter: invert(93%) sepia(20%) saturate(213%) hue-rotate(77deg) brightness(103%) contrast(104%);
                     }
                 }
             }

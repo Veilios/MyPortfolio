@@ -87,6 +87,10 @@ video {
   vertical-align: baseline;
 }
 
+html {
+  background-color: #E8F3F5;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

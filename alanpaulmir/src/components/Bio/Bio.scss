@@ -13,9 +13,9 @@
 
         .b-card.bg {
             position: absolute;
-            top: 50px;
-            left: 50px;
-            background-color: #12355b;
+            top: 60px;
+            left: 100px;
+            background-color: #123524;
         }
 
         .b-card {
@@ -38,12 +38,15 @@
         margin-right: 25px;
 
         .b-title {
-            font-weight: 500;
+            font-weight: 600;
+            color: black;
+            font-size: x-large;
         }
 
         .b-sub {
             margin: 20px 0px;
-            font-weight: 500;
+            font-weight: 600;
+            color: black;
         }
 
         .a-desc {
@@ -61,11 +64,12 @@
                 height: 120px;
                 border-radius: 20px;
                 cursor: pointer;
+                box-shadow: 1px 1px 1px 1px;
             }
 
             .b-award-img.lambda {
                 object-fit: cover;
-                border: solid #999 1px;
+                border: solid #eeee 1px;
             }
 
             .active {
@@ -80,6 +84,7 @@
                 align-self: center;
                 margin: auto;
                 margin-top: 140vh;
+                box-shadow: 2px 2px 2px 2px;
             }
 
             .b-award-texts {
