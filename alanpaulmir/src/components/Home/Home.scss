@@ -38,10 +38,10 @@
             a {
                 cursor: pointer;
 
-                img {
-                    width: 15px;
-                    height: 15px;
+                svg {
+                    width: 20px;
                     transition: ease-in 0.3s;
+                    filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(125deg) brightness(105%) contrast(103%);
 
                     &:hover {
                         transform: scale(1.3);
