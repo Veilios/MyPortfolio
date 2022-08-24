@@ -8,20 +8,21 @@ import "./Home.scss";
 const Home = () => {
     return (
         <div className='home'>
-            <motion.div className='info' animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.85, delay: 1}}>
+            <motion.div className='info' animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.85, delay: 1, ease: 'easeOut' }}>
                 <h1>Alan Paul Mir</h1>
-                <h2><Typed
-                    className='strings'
-                    strings={[
-                        "Developer",
-                        "Freelancer",
-                        "Photographer"
-                    ]}
-                    typeSpeed={100}
-                    backSpeed={100}
-                    loop
-                />
-                </h2>
+                <motion.h2 animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.85, ease: 'easeOut', delay: 1.5}}>
+                    <Typed
+                        className='strings'
+                        strings={[
+                            "Developer",
+                            "Freelancer",
+                            "Photographer"
+                        ]}
+                        typeSpeed={100}
+                        backSpeed={100}
+                        loop
+                    />
+                </motion.h2>
 
                 <div className='icons'>
                     <a href='https://github.com/Veilios'>
@@ -59,7 +60,7 @@ const Home = () => {
                 </div>
             </motion.div>
 
-            <motion.div className="mouse" animate={{scale: 1, opacity: 1}} initial={{scale: 0, opacity: 0}} transition={{duration: 0.85, delay: 2}} ></motion.div>
+            <motion.div className="mouse" animate={{ scale: 1, opacity: 1 }} initial={{ scale: 0, opacity: 0 }} transition={{ duration: 0.85, delay: 2.5 }} ></motion.div>
         </div>
     );
 };

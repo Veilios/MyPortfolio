@@ -18,4 +18,4 @@ My personal portfolio showcasing my work.
     [Done] - Add Footer
     [ ] - Create NavBar
     [Done] - Add some scroll effect library like Motion Scroller
-    [ ] - Animate everything
+    [Done] - Animate everything

@@ -44,7 +44,7 @@ const Bio = () => {
                 </motion.div>
 
                 <motion.div className="b-award" whileInView={{x: [300, 0]}} transition={{ duration: 0.85, ease: 'easeOut'}} >
-                    <img src={LambdaCertificate} alt="Certificate of completion issued by Lambda School" className={isLActive ? "b-award-img active" : "b-award-img lambda"} onClick={handleLClick} />
+                    <motion.img src={LambdaCertificate} animate={{ scale: isLActive ? 4 : 1}} alt="Certificate of completion issued by Lambda School" className={isLActive ? "b-award-img active" : "b-award-img lambda"} onClick={handleLClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Lambda Full Stack Web Certificate</h4>
                         <p className="b-award-desc" >
@@ -56,7 +56,7 @@ const Bio = () => {
                 </motion.div>
 
                 <motion.div className="b-award" whileInView={{x: [300, 0]}} transition={{ duration: 0.85, ease: 'easeOut'}} >
-                    <img src={Award} alt="Certificate of completion issued by Google" className={isGActive ? "b-award-img active" : "b-award-img"} onClick={handleGClick} />
+                    <motion.img animate={{scale: isGActive ? 4 : 1}} src={Award} alt="Certificate of completion issued by Google" className={isGActive ? "b-award-img active" : "b-award-img"} onClick={handleGClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Google UX/UI Certificate</h4>
                         <p className="b-award-desc" >
