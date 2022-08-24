@@ -11,6 +11,8 @@ function App() {
       <Bio />
       <ProductList />
       <Contact />
+
+      <footer>© All Rights Reserved, ALAN PAUL MIR</footer>
     </div>
   );
 }
