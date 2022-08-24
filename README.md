@@ -7,12 +7,15 @@ My personal portfolio showcasing my work.
     - Sass
     - Emailjs
     - react-typed
+    - Framer Motion
+    - react-intersection-observer
 
 
 ## To-Do List
-    [ ] - Add verfication to contact form
+    [Done] - Add verfication to contact form
     [ ] - Add real images
     [ ] - Add remaining two projects
-    [ ] - Add Footer
+    [Done] - Add Footer
     [ ] - Create NavBar
-    [ ] - Add some scroll effect library like Motion Scroller
+    [Done] - Add some scroll effect library like Motion Scroller
+    [ ] - Animate everything

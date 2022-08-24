@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import Photographer from "../../assests/photographer.jpg";
 import Award from "../../assests/award.png";
 import LambdaCertificate from "../../assests/lambdacertificate.png";
 import "./Bio.scss";
+
+
 
 const Bio = () => {
     const [isLActive, setIsLActive] = useState(false);
@@ -20,25 +23,27 @@ const Bio = () => {
     return (
         <div className="bio" >
             <div className="b-left" >
-                <div className="b-card bg" ></div>
-                <div className="b-card" >
+                <motion.div className="b-card bg" whileInView={{ x: [-300, 0] }} transition={{ duration: 0.85, ease: 'easeOut' }}></motion.div>
+                <motion.div className="b-card" whileInView={{ scale: 1 }} initial={{ scale: 0 }} transition={{ duration: 0.85, ease: 'easeOut', delay: 0.5 }}>
                     <img src={Photographer} alt="Headshot of Alan Mir" className="b-img" />
-                </div>
+                </motion.div>
             </div>
 
             <div className="b-right" >
-                <h1 className="b-title" >About Me</h1>
-                <p className="b-sub" >
-                    Driven by Creativity and Ingenuity with every line of code.
-                </p>
-                <p className="b-desc" >
-                    I am Full Stack Web Developer based out of Atlanta, GA. I recieved a certificate of completion from Bloom Tech (formerly known as lambda
-                    school, and have since been working to further improve my skills. I like to tackle problems with determination, and an open-mind. Working
-                    with others is my strong suite, and I am always happy to recieve any feedback. Having a sharp eye for product evolution helps me
-                    prioritize tasks, iterate fast and deliver faster.
-                </p>
+                <motion.div whileInView={{x: [300, 0]}} transition={{ duration: 0.85, ease: 'easeOut'}}>
+                    <h1 className="b-title" >About Me</h1>
+                    <p className="b-sub" >
+                        Driven by Creativity and Ingenuity with every line of code.
+                    </p>
+                    <p className="b-desc" >
+                        I am Full Stack Web Developer based out of Atlanta, GA. I recieved a certificate of completion from Bloom Tech (formerly known as lambda
+                        school, and have since been working to further improve my skills. I like to tackle problems with determination, and an open-mind. Working
+                        with others is my strong suite, and I am always happy to recieve any feedback. Having a sharp eye for product evolution helps me
+                        prioritize tasks, iterate fast and deliver faster.
+                    </p>
+                </motion.div>
 
-                <div className="b-award" >
+                <motion.div className="b-award" whileInView={{x: [300, 0]}} transition={{ duration: 0.85, ease: 'easeOut'}} >
                     <img src={LambdaCertificate} alt="Certificate of completion issued by Lambda School" className={isLActive ? "b-award-img active" : "b-award-img lambda"} onClick={handleLClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Lambda Full Stack Web Certificate</h4>
@@ -48,9 +53,9 @@ const Bio = () => {
                             course.
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="b-award" >
+                <motion.div className="b-award" whileInView={{x: [300, 0]}} transition={{ duration: 0.85, ease: 'easeOut'}} >
                     <img src={Award} alt="Certificate of completion issued by Google" className={isGActive ? "b-award-img active" : "b-award-img"} onClick={handleGClick} />
                     <div className="b-award-texts" >
                         <h4 className="b-award-title" >Google UX/UI Certificate</h4>
@@ -59,7 +64,7 @@ const Bio = () => {
                             UI/UX Designer course.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
