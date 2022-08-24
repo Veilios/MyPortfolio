@@ -24,7 +24,7 @@ const Bio = () => {
         <div className="bio" >
             <div className="b-left" >
                 <motion.div className="b-card bg" whileInView={{ x: [-300, 0] }} transition={{ duration: 0.85, ease: 'easeOut' }}></motion.div>
-                <motion.div className="b-card" whileInView={{ scale: 1 }} initial={{ scale: 0 }} transition={{ duration: 0.85, ease: 'easeOut', delay: 0.5 }}>
+                <motion.div className="b-card" whileInView={{ scale: 1 }} initial={{ scale: 0 }} transition={{ duration: 0.85, ease: 'easeOut' }}>
                     <img src={Photographer} alt="Headshot of Alan Mir" className="b-img" />
                 </motion.div>
             </div>
