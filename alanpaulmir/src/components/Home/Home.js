@@ -1,5 +1,6 @@
 import React from 'react';
 import Typed from 'react-typed';
+import { motion } from 'framer-motion';
 
 
 import "./Home.scss";
@@ -7,7 +8,7 @@ import "./Home.scss";
 const Home = () => {
     return (
         <div className='home'>
-            <div className='info'>
+            <motion.div className='info' animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.85, delay: 1}}>
                 <h1>Alan Paul Mir</h1>
                 <h2><Typed
                     className='strings'
@@ -56,9 +57,9 @@ const Home = () => {
                         </svg>
                     </a>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="mouse"></div>
+            <motion.div className="mouse" animate={{scale: 1, opacity: 1}} initial={{scale: 0, opacity: 0}} transition={{duration: 0.85, delay: 2}} ></motion.div>
         </div>
     );
 };
