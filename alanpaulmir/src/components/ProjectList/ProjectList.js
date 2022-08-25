@@ -8,7 +8,7 @@ import "./ProjectList.scss";
 
 const ProjectList = () => {
     return (
-        <div className="pl" >
+        <div className="pl" id='projects' >
             <motion.div className="pl-texts" whileInView={{opacity: 1}} transition={{ duration: 0.85, ease: 'easeOut', delay: 0.5}} initial={{ opacity: 0 }}>
                 <h1 className="pl-title" >Create & Inspire.</h1>
                 <p className="pl-desc" >

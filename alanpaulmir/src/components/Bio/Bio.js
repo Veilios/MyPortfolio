@@ -21,7 +21,7 @@ const Bio = () => {
     };
 
     return (
-        <div className="bio" >
+        <div className="bio" id="bio" >
             <div className="b-left" >
                 <motion.div className="b-card bg" whileInView={{ x: [-300, 0] }} transition={{ duration: 0.85, ease: 'easeOut' }}></motion.div>
                 <motion.div className="b-card" whileInView={{ scale: 1 }} initial={{ scale: 0 }} transition={{ duration: 0.85, ease: 'easeOut' }}>

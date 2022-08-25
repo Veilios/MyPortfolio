@@ -69,7 +69,7 @@ const Contact = () => {
     })
 
     return (
-        <div className="c" >
+        <div className="c" id='contact' >
             <div className="c-wrapper" >
                 <div className="c-left" >
                     <motion.h1 className="c-title" whileInView={{x: [-300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}}>Get In Touch</motion.h1>

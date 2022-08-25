@@ -7,7 +7,7 @@ import "./Home.scss";
 
 const Home = () => {
     return (
-        <div className='home'>
+        <div className='home' id='home'>
             <motion.div className='info' animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.85, delay: 1, ease: 'easeOut' }}>
                 <h1>Alan Paul Mir</h1>
                 <motion.h2 animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.85, ease: 'easeOut', delay: 1.5}}>
