@@ -1,6 +1,7 @@
 import React, { useRef, useState, } from 'react';
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
+import { motion } from 'framer-motion';
 
 import './Contact.scss';
 
@@ -68,13 +69,13 @@ const Contact = () => {
     })
 
     return (
-        <div className="c" >
+        <div className="c" id='contact' >
             <div className="c-wrapper" >
                 <div className="c-left" >
-                    <h1 className="c-title" >Get In Touch</h1>
+                    <motion.h1 className="c-title" whileInView={{x: [-300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}}>Get In Touch</motion.h1>
 
                     <div className="c-info" >
-                        <div className="c-info-item" >
+                        <motion.div className="c-info-item" whileInView={{x: [-300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512">
@@ -83,8 +84,8 @@ const Contact = () => {
                                 />
                             </svg>
                             <a href='https://mail.google.com/mail/?view=cm&fs=1&to=alanpauldev@gmail.com'>alanpauldev@gmail.com</a>
-                        </div>
-                        <div className="c-info-item" >
+                        </motion.div>
+                        <motion.div className="c-info-item" whileInView={{x: [-300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 384 512"
@@ -97,8 +98,8 @@ const Contact = () => {
                             <a href='https://www.google.com/maps/place/Atlanta,+GA/@33.7679188,-84.5610318,11z/data=!3m1!4b1!4m5!3m4!1s0x88f5045d6993098d:0x66fede2f990b630b!8m2!3d33.7489954!4d-84.3879824'>
                                 Altanta, Georgia
                             </a>
-                        </div>
-                        <div className="c-info-item" >
+                        </motion.div>
+                        <motion.div className="c-info-item" whileInView={{x: [-300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"
@@ -108,8 +109,8 @@ const Contact = () => {
                                 />
                             </svg>
                             <a href='https://github.com/Veilios'>Github/Veilios</a>
-                        </div>
-                        <div className="c-info-item" >
+                        </motion.div>
+                        <motion.div className="c-info-item" whileInView={{x: [-300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"
@@ -119,37 +120,37 @@ const Contact = () => {
                                 />
                             </svg>
                             <a href='https://www.linkedin.com/in/alanpaulmir/'>LinkedIn</a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
                 <div className="c-right" >
-                    <p className="c-desc" >
+                    <motion.p className="c-desc" whileInView={{x: [300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} >
                         <span>How can I help?</span> Send an email. I'm always available new job opportunities,
                         and freelance projects.
-                    </p>
+                    </motion.p>
 
                     {
                         done ?
-                            <div className="thanks">
+                            <motion.div className="thanks" animate={{opacity: 1, scale: 1}} initial={{opacity: 0, scale: 0}} transition={{duration: 0.85, ease: 'easeOut'}}>
                                 <h3>Thank you!</h3>
                                 <p>I'll will be in touch soon.</p>
-                            </div>
+                            </motion.div>
                             :
                             <form ref={formRef} onSubmit={formik.handleSubmit} >
                                 {formik.touched.user_name && formik.errors.user_name ? <div className='error'>{formik.errors.user_name}</div> : null}
-                                <input id='user_name' name="user_name" type="text" placeholder="Name" onChange={formik.handleChange} value={formik.values.user_name} onBlur={formik.handleBlur} />
+                                <motion.input whileInView={{x: [300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} id='user_name' name="user_name" type="text" placeholder="Name" onChange={formik.handleChange} value={formik.values.user_name} onBlur={formik.handleBlur} />
 
                                 {formik.touched.user_email && formik.errors.user_email ? <div className='error'>{formik.errors.user_email}</div> : null}
-                                <input id='user_email' name="user_email" type="text" placeholder="Email" onChange={formik.handleChange} value={formik.values.user_email} onBlur={formik.handleBlur} />
+                                <motion.input whileInView={{x: [300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} id='user_email' name="user_email" type="text" placeholder="Email" onChange={formik.handleChange} value={formik.values.user_email} onBlur={formik.handleBlur} />
 
                                 {formik.touched.user_subject && formik.errors.user_subject ? <div className='error'>{formik.errors.user_subject}</div> : null}
-                                <input id='user_subject' name="user_subject" type="text" placeholder="Subject" onChange={formik.handleChange} value={formik.values.user_subject} onBlur={formik.handleBlur} />
+                                <motion.input whileInView={{x: [300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} id='user_subject' name="user_subject" type="text" placeholder="Subject" onChange={formik.handleChange} value={formik.values.user_subject} onBlur={formik.handleBlur} />
 
                                 {formik.touched.user_message && formik.errors.user_message ? <div className='error'>{formik.errors.user_message}</div> : null}
-                                <textarea id='user_message' name="user_message" rows="5" placeholder="Message" onChange={formik.handleChange} value={formik.values.user_message} onBlur={formik.handleBlur} />
+                                <motion.textarea whileInView={{x: [300, 0]}} transition={{duration: 0.85, ease: 'easeOut'}} id='user_message' name="user_message" rows="5" placeholder="Message" onChange={formik.handleChange} value={formik.values.user_message} onBlur={formik.handleBlur} />
 
-                                <button>Submit</button>
+                                <motion.button whileInView={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 0.85, ease: 'easeOut'}}>Submit</motion.button>
                             </form>
                     }
                 </div>
