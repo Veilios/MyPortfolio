@@ -12,9 +12,10 @@
             margin-left: 50px;
 
             .c-title {
-                font-size: 60px;
+                font-size: 50px;
                 width: 80%;
                 color: black;
+                font-family: 'Roboto Mono', monospace;
             }
 
             .c-info-item {
@@ -35,6 +36,8 @@
                     text-decoration: none;
                     color: #555;
                     transition: ease-in-out 1s;
+                    font-family: 'Roboto Mono', monospace;
+                    font-weight: 400;
 
                     &:hover {
                         color: #688454;

@@ -16,7 +16,7 @@ My personal portfolio showcasing my work.
     [ ] - Add real images
     [ ] - Add remaining two projects
     [Done] - Add Footer
-    [ ] - Create NavBar
+    [Done] - Create NavBar
     [Done] - Add some scroll effect library like Motion Scroller
     [Done] - Animate everything
-    [ ] - Add Fonts
+    [Done] - Add Fonts
