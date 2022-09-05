@@ -81,10 +81,16 @@
 
             .thanks {
                 margin: 13rem 0;
+                font-size: x-large;
             }
 
             form {
                 margin-top: 20px;
+
+                .formik-input {
+                    display: flex;
+                    width: 350px;
+                }
 
                 input {
                     width: 50%;
@@ -120,6 +126,10 @@
 
                 .error {
                     color: darkred;
+                    align-self: center;
+                    padding: 0 1rem;
+                    text-align: center;
+                    white-space: nowrap;
                 }
             }
         }
